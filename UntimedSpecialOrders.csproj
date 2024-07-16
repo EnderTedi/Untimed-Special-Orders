@@ -1,0 +1,23 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+		<TargetFramework>net6.0</TargetFramework>
+		<ImplicitUsings>enable</ImplicitUsings>
+		<Nullable>enable</Nullable>
+		<EnableHarmony>true</EnableHarmony>
+		<Name>Untimed Special Orders</Name>
+		<Description>A framework to allow content packs to create untimed Special Orders.</Description>
+		<Version>1.0.0</Version>
+		<Authors>EnderTedi</Authors>
+		<UniqueID>EnderTedi.UntimedSpecialOrders</UniqueID>
+		<MinimumApiVersion>4.0.0</MinimumApiVersion>
+		<MinimumGameVersion>1.6.0</MinimumGameVersion>
+		<UpdateKeys>Nexus:26117</UpdateKeys>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Leclair.Stardew.ModManifestBuilder" Version="2.3.1" />
+    <PackageReference Include="Pathoschild.Stardew.ModBuildConfig" Version="4.1.1" />
+  </ItemGroup>
+
+</Project>
