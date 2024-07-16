@@ -19,7 +19,7 @@ This mod does nothing by itself and requires another mod to use its function. In
 #### Example:
 ```json
 "<Your Special Order ID>": {
-    "Name": ...,
+    "Name": "...",
     ...
     <Other Data>
     ...
