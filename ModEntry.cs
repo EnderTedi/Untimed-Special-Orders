@@ -39,10 +39,13 @@ namespace UntimedSpecialOrders
         {
             public static void Postfix(SpecialOrder __instance, ref bool __result)
             {
-                SpecialOrderData data = __instance.GetData();
-                if (data is not null && data.CustomFields.TryGetValue("Untimed", out string? _))
+                if (__instance is not null) 
                 {
-                    __result = false;
+                    SpecialOrderData? data = __instance?.GetData();
+                    if (data is not null && data.CustomFields is not null && data.CustomFields.TryGetValue("Untimed", out string? _))
+                    {
+                        __result = false;
+                    }
                 }
             }
         }
@@ -116,10 +119,15 @@ namespace UntimedSpecialOrders
         {
             public static bool Prefix(SpecialOrder __instance)
             {
-                SpecialOrderData? data = __instance?.GetData();
-                if (__instance is not null && data is not null && data.CustomFields is not null && data.CustomFields.TryGetValue("Untimed", out string? _))
+
+                if (__instance is not null)
                 {
-                    __instance.dueDate.Value = Game1.Date.TotalDays + 999;
+                    SpecialOrderData? data = __instance?.GetData();
+                    if (__instance is not null && data is not null && data.CustomFields is not null && data.CustomFields.TryGetValue("Untimed", out string? _))
+                    {
+                        __instance.dueDate.Value = Game1.Date.TotalDays + 999;
+                        return false;
+                    }
                     return true;
                 }
                 return true;

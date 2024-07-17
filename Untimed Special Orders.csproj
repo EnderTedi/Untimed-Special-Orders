@@ -7,7 +7,7 @@
 		<EnableHarmony>true</EnableHarmony>
 		<Name>Untimed Special Orders</Name>
 		<Description>A framework to allow content packs to create untimed Special Orders.</Description>
-		<Version>1.0.0</Version>
+		<Version>1.0.1</Version>
 		<Authors>EnderTedi</Authors>
 		<UniqueID>EnderTedi.UntimedSpecialOrders</UniqueID>
 		<MinimumApiVersion>4.0.0</MinimumApiVersion>
